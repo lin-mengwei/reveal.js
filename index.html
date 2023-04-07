@@ -8,7 +8,7 @@
 
 		<link rel="stylesheet" href="dist/reset.css">
 		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/black.css">
+		<link rel="stylesheet" href="dist/theme/white.css">
 
 		<!-- Theme used for syntax highlighted code -->
 		<link rel="stylesheet" href="plugin/highlight/monokai.css">
@@ -48,41 +48,22 @@
 					<section>Methodology</section>
 					<section>Methodology</section>
 				</section>
-
-				<section data-markdown>
-  						<textarea data-template>
-						    ## Methodology 
-						    Basically, we use a Diff-in-diff to identify the impact of the policy change.
-						    ---
-
-						    ## Identification 
-						    To identify the $$beta$$, we rely on three basic assumptions. 
-						    ---
-
-						    ## Notes 
-						    You will be able to find all the notes in my [website](https://lin-mengwei.github.io).
-					  </textarea>
-				</section>
-
-				
+			
 				<section>
 					<section>Results</section>
 
 					<section>Vertical 2</section>
 				</section>
-				
-				<section data-markdown>
-				  <textarea data-template>
-				    ## Slide 1
-				    A paragraph with some text and a [link](https://hakim.se).
-				    ---
-				    ## Slide 2
-				    ---
-				    ## Slide 3
-				  </textarea>
+
+				<section data-markdown data-separator="===">
+  					<textarea data-template>
+						    ## Thank you for listening! 
+						    ===
+						    ## Notes 
+						    You will be able to find all the notes in my [website](https://lin-mengwei.github.io).
+					</textarea>
 				</section>
 
-				<section>Thank you!</section>
 			</div>
 		</div>
 
@@ -90,6 +71,7 @@
 		<script src="plugin/notes/notes.js"></script>
 		<script src="plugin/markdown/markdown.js"></script>
 		<script src="plugin/highlight/highlight.js"></script>
+		<script src="plugin/math/math.js"></script>
 		<script>
 			// More info about initialization & config:
 			// - https://revealjs.com/initialization/
@@ -98,7 +80,7 @@
 				hash: true,
 				slideNumber: true,
 				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealMath ]
 			});
 		</script>
 	</body>
