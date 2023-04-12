@@ -1,7 +1,7 @@
 /**
- * White theme for reveal.js. This is the opposite of the 'black' theme.
+ * Adopted from one of the official template by LIN, Mengwei.
  *
- * By Hakim El Hattab, http://hakim.se
+ * 
  */
 @import url(./fonts/source-sans-pro/source-sans-pro.css);
 section.has-dark-background, section.has-dark-background h1, section.has-dark-background h2, section.has-dark-background h3, section.has-dark-background h4, section.has-dark-background h5, section.has-dark-background h6 {
@@ -12,17 +12,18 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
  * GLOBAL STYLES
  *********************************************/
 :root {
-  --r-background-color: #fff;
-  --r-main-font: Source Sans Pro, Helvetica, sans-serif;
-  --r-main-font-size: 42px;
+  --r-background-color: #c0c3c2; /*配色 - 主色*/
+  --r-compliment-color: #5c625c; /*配色 - 次主色*/
+  --r-main-font: Arial, Source Sans Pro,  Helvetica, sans-serif;
+  --r-main-font-size: 22px;
   --r-main-color: #222;
   --r-block-margin: 20px;
-  --r-heading-margin: 0 0 20px 0;
+  --r-heading-margin: 0 0 10px 0;
   --r-heading-font: Source Sans Pro, Helvetica, sans-serif;
   --r-heading-color: #222;
   --r-heading-line-height: 1.2;
   --r-heading-letter-spacing: normal;
-  --r-heading-text-transform: uppercase;
+  --r-heading-text-transform: /*uppercase*/;
   --r-heading-text-shadow: none;
   --r-heading-font-weight: 600;
   --r-heading1-text-shadow: none;
@@ -39,7 +40,7 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
 }
 
 .reveal-viewport {
-  background: #fff;
+  background: #cad0d3;
   background-color: var(--r-background-color);
 }
 
@@ -64,9 +65,11 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
 
 .reveal .slides section,
 .reveal .slides section > section {
-  line-height: 1.3;
+  line-height: 1.5;
   font-weight: inherit;
 }
+
+
 
 /*********************************************
  * HEADERS
@@ -104,8 +107,103 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
   font-size: var(--r-heading4-size);
 }
 
+.reveal h6 {
+  font-size: 28px;
+  text-align: justify;
+}
+
 .reveal h1 {
   text-shadow: var(--r-heading1-text-shadow);
+}
+
+
+/*********************************************
+ * OPENING PAGE LAYOUT - title, body, tail 
+ *********************************************/
+
+.presentation-title {
+  position: absolute;
+  background-color: var(--r-compliment-color);
+  border-radius: 10px;
+  line-height: 75px;
+} /*the title box */
+
+.presentation-title h6{
+  color: var(--r-background-color);
+  padding-bottom: 2.5px;
+  padding-left: 10px;
+  padding-right: 10px
+} /*the title text*/
+
+/*********************************************
+ * CONTENT PAGE LAYOUT - title, body, tail 
+ *********************************************/
+.my-slide {
+  position: relative;
+  height: 100%;
+}
+
+.slide-title {
+  position: absolute;
+  border: 2px solid var(--r-background-color);
+  width: 100%;
+  height: 75px;
+  top: 15px;
+  background-color: var(--r-compliment-color);
+  border-radius: 10px;
+  line-height: 75px;
+} /*the title box*/
+
+.slide-title h6{
+  color: var(--r-background-color);
+  padding-top: 3.5px;
+  padding-left: 10px;
+  padding-right: 10px
+} /*the title text*/
+
+.title-line {
+  border: none;
+  height: 0;
+  background-color: black;
+  margin: 0;
+} /*the line*/
+
+.line-title-body {
+  position: absolute;
+  top: 80px;
+  left: 0;
+  right: 0;
+  padding: 10px;
+  color: black;
+} /*position of the line*/
+
+.slide-body {
+  position: absolute;
+  top: 95px;
+  left: 0;
+  right: 0;
+  padding: 10px;
+  background-color:;
+  color: black;
+} /*position of the body*/
+
+.slide-tail {
+  position: absolute;
+  border: 2px solid var(--r-background-color);
+  width: 100%;
+  height: 20px;
+  bottom: 5px;
+  background-color: var(--r-compliment-color);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+} /*the tail box*/
+
+
+.slide-tail > div {
+  color: var(--r-background-color);
+  float: left;
+  font-size: 12px;
+  vertical-align: bottom;
 }
 
 /*********************************************
@@ -147,8 +245,9 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
 .reveal dl,
 .reveal ul {
   display: inline-block;
-  text-align: left;
-  margin: 0 0 0 1em;
+  text-align: justify;
+  margin: 20px 0 1em 1em;
+  
 }
 
 .reveal ol {
@@ -173,6 +272,18 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
 .reveal ol ul {
   display: block;
   margin-left: 40px;
+}
+
+.reveal ul.nodots{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.reveal li{
+  text-indent: -2em; /* adjust the value as needed */
+  /*margin-bottom: 0.5em; add some space between list items */
+  margin-left: 2em;
 }
 
 .reveal dt {
